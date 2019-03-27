@@ -1,6 +1,7 @@
 
 package Ventana;
 
+import java.awt.Color;
 import javax.swing.JFrame; //Para diseñar cuadros de dialogo, creo
 
 
@@ -15,7 +16,7 @@ public class Ventana extends JFrame{
         
         //setBounds(700,300,500,500);//Establece la posicion de apareicion y el tamaño de la ventana
         
-        
+   this.getContentPane().setBackground(Color.blue);      
 
         
     }
