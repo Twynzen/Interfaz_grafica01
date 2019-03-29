@@ -4,6 +4,7 @@ package Ventana;
 //import java.awt.Color;
 import java.awt.Color;
 import javax.swing.JFrame; //Para diseñar cuadros de dialogo, creo
+import javax.swing.JLabel; //para etiquetas
 import javax.swing.JPanel; //libreria para crear paneles
 
 
@@ -29,9 +30,16 @@ public class Ventana extends JFrame{
     
     
     private void iniciarComponentes(){
-        JPanel panel = new JPanel();  
-        panel.setBackground(Color.BLUE);
-        this.getContentPane().add(panel);
+        JPanel panel = new JPanel();   //Creacion de un panel
+        //panel.setBackground(Color.BLUE); // color del panel
+        panel.setLayout(null); //Desactivando el diseño por defecto
+        this.getContentPane().add(panel);//Se coloca el panel sobre la ventana
+        
+        JLabel etiqueta = new JLabel();//se crea una etiquet
+        etiqueta.setText("HOLA"); //Establecemos el texto de la etiqueta
+        etiqueta.setBounds(1, 100, 40, 30); //Ubico la etiqueta
+        panel.add(etiqueta); //Agregamos la etiqueta al panel
+        
     }
     
 }
